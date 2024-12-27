@@ -39,9 +39,12 @@ export const authSlice = createSlice({
       });
       state.posts = updatedPosts;
     },
+    resetForm: (state) => {
+      state.form = null; // You can store form data here if needed
+    },
   },
 });
 
-export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost } =
+export const { setMode, setLogin, setLogout, setFriends, setPosts, setPost, resetForm } =
   authSlice.actions;
 export default authSlice.reducer;
